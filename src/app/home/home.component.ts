@@ -7,6 +7,7 @@ import { ApiService } from "../services/api.service"
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
   cats: any[] = []
 
   constructor(

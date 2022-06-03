@@ -13,6 +13,6 @@ export class ApiService {
     private httpClient:HttpClient
   ) { }
   getAllCats():Observable<any>{
-    return this.httpClient.get<any>(this.baseUrl + 'cats',{observe:'response'});
+    return this.httpClient.get<any>(this.baseUrl + 'cats');
   }
 }
