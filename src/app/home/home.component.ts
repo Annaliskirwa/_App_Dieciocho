@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ApiService } from "../services/api.service"
+import { ApiService } from "../services/api.service"
 
 @Component({
   selector: 'app-home',
@@ -13,6 +13,16 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+  getCat():void{
+    this.apiService.getAllCats().subscribe(
+      (res:any)=>{
+        console.log(res);
+      },
+      (error:any)=>{
+        
+      }
+    )
   }
 
 }
