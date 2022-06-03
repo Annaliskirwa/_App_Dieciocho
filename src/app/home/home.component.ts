@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getCat();
   }
   getCat():void{
     this.apiService.getAllCats().subscribe(
@@ -20,7 +21,8 @@ export class HomeComponent implements OnInit {
         console.log(res);
       },
       (error:any)=>{
-        
+        console.log("no cat")
+
       }
     )
   }
