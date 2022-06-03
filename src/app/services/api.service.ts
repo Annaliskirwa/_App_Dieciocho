@@ -12,4 +12,7 @@ export class ApiService {
   constructor(
     private httpClient:HttpClient
   ) { }
+  getAllCats():Observable<any>{
+    return this.httpClient.get<any>(this.baseUrl + 'cats',{observe:'response'});
+  }
 }
