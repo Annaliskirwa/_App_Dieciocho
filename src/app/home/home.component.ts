@@ -7,6 +7,7 @@ import { ApiService } from "../services/api.service"
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  cats: any[] = []
 
   constructor(
     private apiService:ApiService
@@ -18,7 +19,8 @@ export class HomeComponent implements OnInit {
   getCat():void{
     this.apiService.getAllCats().subscribe(
       (res:any)=>{
-        console.log(res);
+        // console.log(res);
+        this.cats = res;
       },
       (error:any)=>{
         console.log("no cat")
