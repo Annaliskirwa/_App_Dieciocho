@@ -12,6 +12,12 @@ export class HomeComponent implements OnInit {
   showForm = false;
   createCatSuccess = false;
   createCatFail = false;
+  cat = {
+    name: 'Annalis',
+    age: 24,
+    gender: 'Female',
+    color: 'Gray'
+  };
 
   constructor(
     private apiService:ApiService
