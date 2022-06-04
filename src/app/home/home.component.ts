@@ -53,6 +53,13 @@ export class HomeComponent implements OnInit {
         color: 'Gray'
       };
       this.showForm = false;
+    },
+    (error:any)=>{
+      this.createCatSuccess = false;
+      this.createCatFail = true;
+    },
+    ()=>{
+      this.getCat();
     })
   }
 
