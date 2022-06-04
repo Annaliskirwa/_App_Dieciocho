@@ -8,7 +8,10 @@ import { ApiService } from "../services/api.service"
 })
 export class HomeComponent implements OnInit {
 
-  cats: any[] = []
+  cats: any[] = [];
+  showForm = false;
+  createCatSuccess = false;
+  createCatFail = false;
 
   constructor(
     private apiService:ApiService
