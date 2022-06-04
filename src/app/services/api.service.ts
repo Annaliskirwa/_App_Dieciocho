@@ -15,7 +15,7 @@ export class ApiService {
   getAllCats():Observable<any>{
     return this.httpClient.get<any>(this.baseUrl + 'cats');
   }
-  craeteCat(catObj: any):Observable<any>{
+  createCat(catObj: any):Observable<any>{
     return this.httpClient.post<any>(this.baseUrl+'cats',catObj);
   }
 }
