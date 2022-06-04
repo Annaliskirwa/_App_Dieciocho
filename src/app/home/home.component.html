@@ -1,7 +1,7 @@
 <div class = "container home">
     <!-- alerts -->
-    <div class="alert" *ngIf="createCatFail || createCatSucess" [ngClass]="{'alert-danger':createCatFail,'alert-success':createCatSucess}" [@fadeIn]>
-        <span *ngIf="createCatSucess">Cat has been created successfully!</span>
+    <div class="alert" *ngIf="createCatFail || createCatSuccess" [ngClass]="{'alert-danger':createCatFail,'alert-success':createCatSuccess}" [@fadeIn]>
+        <span *ngIf="createCatSuccess">Cat has been created successfully!</span>
         <span *ngIf="createCatFail">Cat could not be created, try again later.</span>
       </div>
     

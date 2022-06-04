@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
       }
     )
   }
-  toogleForm():void{
+  toggleForm():void{
     this.showForm = !this.showForm;
   }
   createCat():void{
