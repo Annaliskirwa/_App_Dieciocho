@@ -60,6 +60,10 @@ export class HomeComponent implements OnInit {
     },
     ()=>{
       this.getCat();
+      setTimeout(()=>{
+        this.createCatSuccess = false;
+        this.createCatFail = true;
+      },4000);
     })
   }
 
