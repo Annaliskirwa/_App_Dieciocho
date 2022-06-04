@@ -41,5 +41,19 @@ export class HomeComponent implements OnInit {
   toogleForm():void{
     this.showForm = !this.showForm;
   }
+  createCat():void{
+    this.apiService.craeteCat(this.cat).subscribe((res:any)=>{
+      this.createCatSuccess = true;
+      this.createCatFail = false;
+
+      this.cat = {
+        name: 'Annalis',
+        age: 24,
+        gender: 'Female',
+        color: 'Gray'
+      };
+      this.showForm = false;
+    })
+  }
 
 }
