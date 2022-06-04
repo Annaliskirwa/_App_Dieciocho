@@ -38,5 +38,8 @@ export class HomeComponent implements OnInit {
       }
     )
   }
+  toogleForm():void{
+    this.showForm = !this.showForm;
+  }
 
 }
