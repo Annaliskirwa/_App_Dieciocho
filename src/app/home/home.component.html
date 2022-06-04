@@ -1,11 +1,13 @@
 <div class = "container home">
-    <div class = "row">
-        <div class = "col-md-4" *ngFor="let cat of cats">
-            <div class = "card">
-               <h4>{{cat.name}}</h4>
-               <span>{{cat.age}} year old</span>
-               <span>{{cat.gender}} cat.</span>
-            </div>
+    <!-- cat list -->
+    <div class="row" *ngIf="!showForm && cats.length" [@fadeInGrow]>
+        <div class="col-md-3" *ngFor="let cat of cats">
+          <div class="card">
+            <h5>{{cat.name}}</h5>
+            <span class="d-block">{{!cat.age ? 0 : cat.age}} year old</span>
+            <span class="d-block">{{cat.gender | titlecase}} cat</span>
+            <span class="cat-color" [ngStyle]="{'background-color':cat.color}" [title]="cat.color | titlecase"></span>
+          </div>
         </div>
-    </div>
+      </div>
 </div>
